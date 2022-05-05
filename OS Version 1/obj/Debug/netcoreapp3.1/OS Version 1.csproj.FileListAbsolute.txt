@@ -1,0 +1,14 @@
+C:\Users\hp\source\repos\OS Version 1\OS Version 1\bin\Debug\netcoreapp3.1\OS Version 1.exe
+C:\Users\hp\source\repos\OS Version 1\OS Version 1\bin\Debug\netcoreapp3.1\OS Version 1.deps.json
+C:\Users\hp\source\repos\OS Version 1\OS Version 1\bin\Debug\netcoreapp3.1\OS Version 1.runtimeconfig.json
+C:\Users\hp\source\repos\OS Version 1\OS Version 1\bin\Debug\netcoreapp3.1\OS Version 1.runtimeconfig.dev.json
+C:\Users\hp\source\repos\OS Version 1\OS Version 1\bin\Debug\netcoreapp3.1\OS Version 1.dll
+C:\Users\hp\source\repos\OS Version 1\OS Version 1\bin\Debug\netcoreapp3.1\OS Version 1.pdb
+C:\Users\hp\source\repos\OS Version 1\OS Version 1\obj\Debug\netcoreapp3.1\OS Version 1.csproj.AssemblyReference.cache
+C:\Users\hp\source\repos\OS Version 1\OS Version 1\obj\Debug\netcoreapp3.1\OS Version 1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hp\source\repos\OS Version 1\OS Version 1\obj\Debug\netcoreapp3.1\OS Version 1.AssemblyInfoInputs.cache
+C:\Users\hp\source\repos\OS Version 1\OS Version 1\obj\Debug\netcoreapp3.1\OS Version 1.AssemblyInfo.cs
+C:\Users\hp\source\repos\OS Version 1\OS Version 1\obj\Debug\netcoreapp3.1\OS Version 1.csproj.CoreCompileInputs.cache
+C:\Users\hp\source\repos\OS Version 1\OS Version 1\obj\Debug\netcoreapp3.1\OS Version 1.dll
+C:\Users\hp\source\repos\OS Version 1\OS Version 1\obj\Debug\netcoreapp3.1\OS Version 1.pdb
+C:\Users\hp\source\repos\OS Version 1\OS Version 1\obj\Debug\netcoreapp3.1\OS Version 1.genruntimeconfig.cache
