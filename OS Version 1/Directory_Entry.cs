@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Runtime.Serialization;
+using System.Runtime.InteropServices;
+
 
 namespace OS_Version_1
 {
@@ -20,7 +23,7 @@ namespace OS_Version_1
         {
         }
         // file (kero.txt)   directory (kerollos)
-        public Directory_Entry(string name , byte type , int[] empty,int firstcluster , int size)
+        public Directory_Entry(string name , byte type ,int firstcluster , int size, [Optional] int[] empty)
         {
             this.attr = type;
             if (this.attr == 0x10)
@@ -37,9 +40,9 @@ namespace OS_Version_1
         }
 
 
-        public String writeDirName(String fullName)
+        /*public String writeDirName(String fullName)
         {
-            String name = "";
+            String name = string.Empty;
             for (int i = 0; i < fullName.Length; i++)
             {
                 if (i == 11)
@@ -48,9 +51,56 @@ namespace OS_Version_1
                 }
                 name += fullName[i];
             }
+
             return name;
+        }*/
+
+        public String writeDirName(String fullName)
+        {
+            String name = string.Empty;
+            if(fullName.Length <= 11)
+            {
+                name = fullName;
+                for(int i = fullName.Length ; i < 11 ; i++)
+                {
+                    name += ' ';
+                }
+                return name;
+            }
+            else
+            {
+                name = fullName.Substring(0, 11);
+                return name;
+            }
         }
+
         public String writeFileName(String fullName)
+        {
+            String name = string.Empty;
+            if(fullName.Length <= 11)
+            {
+                name = fullName;
+                for(int i = fullName.Length; i < 11; i++)
+                {
+                    name += ' ';
+                }
+                return name;
+            }
+            else
+            {
+                for(int i = 0; i<7; i++)
+                {
+                    name += fullName[i];
+                }
+                int index = fullName.LastIndexOf('.');
+                for(int i = index; i<fullName.Length; i++)
+                {
+                    name += fullName[i];
+                }
+                return name;
+            }
+        }
+        /*public String writeFileName(String fullName)
         {
             String name = "";
             if(fullName.Length > 11)
@@ -72,6 +122,6 @@ namespace OS_Version_1
             }
 
             return name;
-        }
+        }*/
     }
 }

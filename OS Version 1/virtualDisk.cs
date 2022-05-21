@@ -41,7 +41,7 @@ namespace OS_Version_1
             else
             {
                 disk = new FileStream(fileName, FileMode.Open);
-                Mini_Fat.readFat(); 
+                Mini_Fat.setFatArray(Mini_Fat.readFat());
             }
             
         }

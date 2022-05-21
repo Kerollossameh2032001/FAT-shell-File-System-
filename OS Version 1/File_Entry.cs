@@ -14,7 +14,7 @@ namespace OS_Version_1
         public directory parent;
 
 
-        public File_Entry(string name, byte type, int firstcluster, directory p, [Optional] int[] empty, [Optional] int size)
+        public File_Entry(string name, byte type, int firstcluster, directory p,int size , [Optional] int[] empty)
         {
             this.attr = type;
             if (this.attr == 0x10)
@@ -66,7 +66,7 @@ namespace OS_Version_1
         {
 
             Directory_Entry MyDirectory = new Directory_Entry(this.dir_name, this.attr,
-                this.dir_empty, this.dir_firstcluster, this.dir_fileSize);
+                 this.dir_firstcluster, this.dir_fileSize, this.dir_empty);
             return MyDirectory;
         }
 
@@ -95,7 +95,7 @@ namespace OS_Version_1
 
 
         //4_Method to delete Directory
-        public void deleteDirectory()
+        public void deleteFile()
         {
             emptyMyClusters();
             if (parent != null)
