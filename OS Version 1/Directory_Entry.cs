@@ -40,20 +40,7 @@ namespace OS_Version_1
         }
 
 
-        /*public String writeDirName(String fullName)
-        {
-            String name = string.Empty;
-            for (int i = 0; i < fullName.Length; i++)
-            {
-                if (i == 11)
-                {
-                    break;
-                }
-                name += fullName[i];
-            }
-
-            return name;
-        }*/
+        
 
         public String writeDirName(String fullName)
         {
@@ -100,28 +87,5 @@ namespace OS_Version_1
                 return name;
             }
         }
-        /*public String writeFileName(String fullName)
-        {
-            String name = "";
-            if(fullName.Length > 11)
-            {
-                for (int i = 0; i < 7; i++)
-                {
-                    name += fullName[i];
-                }
-                for (int i = fullName.Length - 4; i < fullName.Length; i++)
-                {
-                    name += fullName[i];
-                }
-
-            }
-            else
-            {
-               name = fullName;
-                
-            }
-
-            return name;
-        }*/
     }
 }

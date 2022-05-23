@@ -49,11 +49,9 @@ namespace OS_Version_1
         //2-Method to write cluster in file
         public static void writeCluster(int cluster, byte[] data)
         {
-            //disk = File.Open(path, FileMode.Open);
             disk.Seek(1024 * cluster, SeekOrigin.Begin);
             disk.Write(data);
             disk.Flush();
-            //disk.Close();
         }
 
 
@@ -62,13 +60,8 @@ namespace OS_Version_1
         public static byte[] readCluster(int index)
         {
             byte[] result = new byte[1024];
-
-           // disk = File.Open(path, FileMode.Open);
             disk.Seek(1024 * index, SeekOrigin.Begin);
-
             disk.Read(result);
-           // disk.Close();
-
             return result;
         }
 

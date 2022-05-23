@@ -43,6 +43,7 @@ namespace OS_Version_1
                      obj = new directory(root.dirsOrfiles[index].dir_name,
                             root.dirsOrfiles[index].attr,
                             root.dirsOrfiles[index].dir_firstcluster, parent);
+                    obj.readDirectory();
                     parent = obj;
                 }
 
@@ -59,6 +60,7 @@ namespace OS_Version_1
                          obj = new directory(obj.dirsOrfiles[index].dir_name,
                             obj.dirsOrfiles[index].attr,
                             obj.dirsOrfiles[index].dir_firstcluster, parent);
+                        obj.readDirectory();
                         parent = obj;
                     }
                 }
@@ -130,21 +132,17 @@ namespace OS_Version_1
             //create infinity loop to make user Enter command continuosly
             while (true)
             {
-               
+
                 //initialize the current path,  print it  and
                 //wait user to Enter the command
-                
-                //currentPath = Directory.GetCurrentDirectory();
-                if(currentPath.IndexOf(' ') == -1)
+
+                var path = currentPath.Split(' ');
+                currentPath = string.Empty;
+                for(int i = 0; i<path.Length; i++)
                 {
-                    Console.Write(currentPath + " \\>");
+                    currentPath += path[i];
                 }
-                else
-                {
-                    Console.Write(currentPath.Remove(currentPath.IndexOf(' ')) + " \\>");
-                }
-                
-                
+                Console.Write(currentPath + " \\>");
                 //take input as a list of size 3 splited by sapace 
                 //to Extract command name 
                 var inPut = (Console.ReadLine()).Split(' ',3);

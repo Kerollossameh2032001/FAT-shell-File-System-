@@ -27,21 +27,6 @@ namespace OS_Version_1
                     Fat[i] = 0;
                 }
             }
-            /*for (int i = 0; i < Fat.Length; i++)
-            {
-                if (i == 0 || i == 4)
-                {
-                    Fat[i] = -1;
-                }
-                else if (i > 0 && i <= 3)
-                {
-                    Fat[i] = i + 1;
-                }
-                else
-                {
-                    Fat[i] = 0;
-                }
-            }*/
         }
 
         //2-Method for print Fat fro debug
@@ -86,6 +71,9 @@ namespace OS_Version_1
             Fat = arr;
         }
 
+
+
+        //7-Method to write Fat array in virtual disk
         public static byte[] ToBytes(int[] array)
         {
             byte[] bytes = null;
@@ -142,6 +130,8 @@ namespace OS_Version_1
             }
         }
         */
+
+
         //8-Method to read Fat
         public static int[] readFat()
          {

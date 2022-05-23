@@ -132,6 +132,8 @@ namespace OS_Version_1
         /// <param name="argument"></param>
         public static void command(String current_Path, directory current_directory,String argument = "")
         {
+            current_directory.readDirectory();
+
             if (argument == "" || argument == ".")
             {
                 Console.WriteLine("\n"+current_Path);
@@ -155,7 +157,8 @@ namespace OS_Version_1
                     {
                         break;
                     }
-                    currentPath = current_Path.Remove(index);
+                    current_Path = current_Path.Remove(index);
+                    currentPath = current_Path;
                     current = Program.moveToDir(currentPath);
                 }
             }
@@ -164,6 +167,7 @@ namespace OS_Version_1
                 //if the argument is name 
                 if (!argument.Contains('\\'))
                 {
+                    current_directory.readDirectory();
                     int index = current_directory.search(argument);
                     if(index == -1)
                     {
